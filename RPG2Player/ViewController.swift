@@ -9,17 +9,54 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var gc: GameController!
 
+    @IBOutlet weak var leftAttackButton: UIButton!
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var rightAttackButton: UIButton!
+    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var leftHpLabel: UILabel!
+    @IBOutlet weak var rightHpLabel: UILabel!
+    @IBOutlet weak var leftPlayerSelectButton: UIButton!
+    @IBOutlet weak var rightPlayerSelectButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var restartLabel: UILabel!
+    @IBOutlet weak var rightSelectLabel: UILabel!
+    @IBOutlet weak var leftSelectLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var rightImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        gc = GameController(vc: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func leftAttackPressed(sender: AnyObject) {
+        
     }
 
+    @IBAction func rightAttackPressed(sender: AnyObject) {
+        
+        
+    }
 
+    @IBAction func leftSelectPressed(sender: AnyObject) {
+    
+        gc.golemChosen()
+        
+    }
+    
+    @IBAction func rightSelectPressed(sender: AnyObject) {
+        
+        gc.knightChosen()
+
+    }
+    
+    @IBAction func restartPressed(sender: AnyObject) {
+        
+    }
 }
 

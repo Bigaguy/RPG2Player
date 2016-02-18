@@ -12,6 +12,10 @@
 		01557A0A1C74D1DF0031F210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01557A081C74D1DF0031F210 /* Main.storyboard */; };
 		01557A0C1C74D1DF0031F210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01557A0B1C74D1DF0031F210 /* Assets.xcassets */; };
 		01557A0F1C74D1DF0031F210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01557A0D1C74D1DF0031F210 /* LaunchScreen.storyboard */; };
+		01557A171C7509040031F210 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01557A161C7509040031F210 /* Character.swift */; };
+		01557A191C750D100031F210 /* Golem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01557A181C750D100031F210 /* Golem.swift */; };
+		01557A1B1C750F450031F210 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01557A1A1C750F450031F210 /* Knight.swift */; };
+		01557A1F1C7562B60031F210 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01557A1E1C7562B60031F210 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		01557A0B1C74D1DF0031F210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01557A0E1C74D1DF0031F210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01557A101C74D1DF0031F210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01557A161C7509040031F210 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		01557A181C750D100031F210 /* Golem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Golem.swift; sourceTree = "<group>"; };
+		01557A1A1C750F450031F210 /* Knight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		01557A1E1C7562B60031F210 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				01557A041C74D1DF0031F210 /* AppDelegate.swift */,
 				01557A061C74D1DF0031F210 /* ViewController.swift */,
 				01557A081C74D1DF0031F210 /* Main.storyboard */,
+				01557A161C7509040031F210 /* Character.swift */,
+				01557A181C750D100031F210 /* Golem.swift */,
+				01557A1A1C750F450031F210 /* Knight.swift */,
+				01557A1E1C7562B60031F210 /* GameController.swift */,
 				01557A0B1C74D1DF0031F210 /* Assets.xcassets */,
 				01557A0D1C74D1DF0031F210 /* LaunchScreen.storyboard */,
 				01557A101C74D1DF0031F210 /* Info.plist */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01557A171C7509040031F210 /* Character.swift in Sources */,
+				01557A1F1C7562B60031F210 /* GameController.swift in Sources */,
 				01557A071C74D1DF0031F210 /* ViewController.swift in Sources */,
+				01557A191C750D100031F210 /* Golem.swift in Sources */,
 				01557A051C74D1DF0031F210 /* AppDelegate.swift in Sources */,
+				01557A1B1C750F450031F210 /* Knight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
