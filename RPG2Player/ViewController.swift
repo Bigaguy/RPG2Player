@@ -32,14 +32,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         gc = GameController(vc: self)
+        
+        if gc.playerOneAttackFirst() {
+            leftAttackButton.enabled = true
+            rightAttackButton.enabled = false
+            gc.player1First = true
+        } else {
+            leftAttackButton.enabled = false
+            rightAttackButton.enabled = true
+            gc.player2First = true
+        }
+        
     }
 
     @IBAction func leftAttackPressed(sender: AnyObject) {
+        gc.playerOneAttack()
+        gc.checkGameStatus()
         
     }
 
     @IBAction func rightAttackPressed(sender: AnyObject) {
-        
+        gc.playerTwoAttack()
+        gc.checkGameStatus()
         
     }
 
@@ -56,6 +70,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartPressed(sender: AnyObject) {
+        gc.restart()
         
     }
 }

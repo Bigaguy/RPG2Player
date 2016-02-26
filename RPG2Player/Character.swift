@@ -11,7 +11,6 @@ import Foundation
 class Character {
     
     private var _hp : Int = 100
-    private var _attackPwr : Int = 10
     private var _side : playerSide!
     private var _type : characterType!
     
@@ -43,12 +42,6 @@ class Character {
         }
     }
     
-    var attackPwr : Int {
-        get{
-            return _attackPwr
-        }
-    }
-    
     var isAlive : Bool {
         get{
             if hp <= 0 {
@@ -59,17 +52,18 @@ class Character {
         }
     }
     
-    init(type : characterType, side: playerSide, startingHp: Int, attackPwr: Int){
+    init(type : characterType, side: playerSide, startingHp: Int){
         _hp = startingHp
-        _attackPwr = attackPwr
         _side = side
         _type = type
     }
     
-    func attemptAttack(attackPwr: Int) -> Bool {
-        self._hp -= attackPwr
+    func attemptAttack() -> Int {
+        var randomNumber : Int!
+        randomNumber = Int(1+arc4random_uniform(40))
+        self._hp -= randomNumber
         
-        return true
+        return randomNumber
     }
     
 }
