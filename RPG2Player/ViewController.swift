@@ -34,42 +34,42 @@ class ViewController: UIViewController {
         gc = GameController(vc: self)
         
         if gc.playerOneAttackFirst() {
-            leftAttackButton.enabled = true
-            rightAttackButton.enabled = false
+            leftAttackButton.isEnabled = true
+            rightAttackButton.isEnabled = false
             gc.player1First = true
         } else {
-            leftAttackButton.enabled = false
-            rightAttackButton.enabled = true
+            leftAttackButton.isEnabled = false
+            rightAttackButton.isEnabled = true
             gc.player2First = true
         }
         
     }
 
-    @IBAction func leftAttackPressed(sender: AnyObject) {
+    @IBAction func leftAttackPressed(_ sender: AnyObject) {
         gc.playerOneAttack()
         gc.checkGameStatus()
         
     }
 
-    @IBAction func rightAttackPressed(sender: AnyObject) {
+    @IBAction func rightAttackPressed(_ sender: AnyObject) {
         gc.playerTwoAttack()
         gc.checkGameStatus()
         
     }
 
-    @IBAction func leftSelectPressed(sender: AnyObject) {
+    @IBAction func leftSelectPressed(_ sender: AnyObject) {
     
         gc.golemChosen()
         
     }
     
-    @IBAction func rightSelectPressed(sender: AnyObject) {
+    @IBAction func rightSelectPressed(_ sender: AnyObject) {
         
         gc.knightChosen()
 
     }
     
-    @IBAction func restartPressed(sender: AnyObject) {
+    @IBAction func restartPressed(_ sender: AnyObject) {
         gc.restart()
         
     }

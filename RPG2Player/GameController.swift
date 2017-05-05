@@ -25,16 +25,16 @@ class GameController : NSObject{
     }
     
     func changeScreenElements() {
-        vc.leftAttackButton.hidden = false
-        vc.rightAttackButton.hidden = false
-        vc.leftHpLabel.hidden = false
-        vc.rightHpLabel.hidden = false
-        vc.rightLabel.hidden = false
-        vc.leftLabel.hidden = false
-        vc.rightPlayerSelectButton.hidden = true
-        vc.leftPlayerSelectButton.hidden = true
-        vc.rightSelectLabel.hidden = true
-        vc.leftSelectLabel.hidden = true
+        vc.leftAttackButton.isHidden = false
+        vc.rightAttackButton.isHidden = false
+        vc.leftHpLabel.isHidden = false
+        vc.rightHpLabel.isHidden = false
+        vc.rightLabel.isHidden = false
+        vc.leftLabel.isHidden = false
+        vc.rightPlayerSelectButton.isHidden = true
+        vc.leftPlayerSelectButton.isHidden = true
+        vc.rightSelectLabel.isHidden = true
+        vc.leftSelectLabel.isHidden = true
     }
     
     func updatePlayerOneHp() {
@@ -57,7 +57,7 @@ class GameController : NSObject{
     }
     
     
-    func setupCharacter(character: Character) {
+    func setupCharacter(_ character: Character) {
         
         changeScreenElements()
         
@@ -66,7 +66,7 @@ class GameController : NSObject{
             if character.type == Character.characterType.knight {
                 
                 vc.leftImage.image = UIImage(named:"player")
-                vc.leftImage.transform = CGAffineTransformMakeScale(-1, 1)
+                vc.leftImage.transform = CGAffineTransform(scaleX: -1, y: 1)
                 
             } else {
                 vc.leftImage.image = UIImage(named:"enemy")
@@ -80,7 +80,7 @@ class GameController : NSObject{
                 
             } else {
                 vc.rightImage.image = UIImage(named:"enemy")
-                vc.rightImage.transform = CGAffineTransformMakeScale(-1, 1)
+                vc.rightImage.transform = CGAffineTransform(scaleX: -1, y: 1)
                 
             }
             
@@ -148,24 +148,24 @@ class GameController : NSObject{
     func checkGameStatus() {
         if leftPlayer!.hp <= 0 {
             vc.bottomLabel.text = "Player 2 wins!"
-            vc.restartButton.hidden = false
-            vc.restartLabel.hidden = false
-            vc.leftAttackButton.hidden = true
-            vc.rightAttackButton.hidden = true
-            vc.leftHpLabel.hidden = true
-            vc.rightHpLabel.hidden = true
-            vc.rightLabel.hidden = true
-            vc.leftLabel.hidden = true
+            vc.restartButton.isHidden = false
+            vc.restartLabel.isHidden = false
+            vc.leftAttackButton.isHidden = true
+            vc.rightAttackButton.isHidden = true
+            vc.leftHpLabel.isHidden = true
+            vc.rightHpLabel.isHidden = true
+            vc.rightLabel.isHidden = true
+            vc.leftLabel.isHidden = true
         } else if  rightPlayer!.hp <= 0 {
             vc.bottomLabel.text = "Player 1 wins!"
-            vc.restartButton.hidden = false
-            vc.restartLabel.hidden = false
-            vc.leftAttackButton.hidden = true
-            vc.rightAttackButton.hidden = true
-            vc.leftHpLabel.hidden = true
-            vc.rightHpLabel.hidden = true
-            vc.rightLabel.hidden = true
-            vc.leftLabel.hidden = true
+            vc.restartButton.isHidden = false
+            vc.restartLabel.isHidden = false
+            vc.leftAttackButton.isHidden = true
+            vc.rightAttackButton.isHidden = true
+            vc.leftHpLabel.isHidden = true
+            vc.rightHpLabel.isHidden = true
+            vc.rightLabel.isHidden = true
+            vc.leftLabel.isHidden = true
         }
     }
     
@@ -173,8 +173,8 @@ class GameController : NSObject{
         let attackPower = rightPlayer!.attemptAttack()
         vc.bottomLabel.text = "Attacked player 2 for \(attackPower) HP"
         updatePlayerTwoHp()
-        vc.leftAttackButton.enabled = false
-        vc.rightAttackButton.enabled = true
+        vc.leftAttackButton.isEnabled = false
+        vc.rightAttackButton.isEnabled = true
             
         }
         
@@ -184,8 +184,8 @@ class GameController : NSObject{
         let attackPower = leftPlayer!.attemptAttack()
         vc.bottomLabel.text = "Attacked player 1 for \(attackPower) HP"
         updatePlayerOneHp()
-        vc.rightAttackButton.enabled = false
-        vc.leftAttackButton.enabled = true
+        vc.rightAttackButton.isEnabled = false
+        vc.leftAttackButton.isEnabled = true
             
         }
 
@@ -203,16 +203,16 @@ class GameController : NSObject{
     }
     
     func restart() {
-        vc.rightPlayerSelectButton.hidden = false
-        vc.leftPlayerSelectButton.hidden = false
-        vc.rightSelectLabel.hidden = false
-        vc.leftSelectLabel.hidden = false
-        vc.restartButton.hidden = true
-        vc.restartLabel.hidden = true
+        vc.rightPlayerSelectButton.isHidden = false
+        vc.leftPlayerSelectButton.isHidden = false
+        vc.rightSelectLabel.isHidden = false
+        vc.leftSelectLabel.isHidden = false
+        vc.restartButton.isHidden = true
+        vc.restartLabel.isHidden = true
         vc.rightImage.image = UIImage(named: "player")
-        vc.rightImage.transform = CGAffineTransformMakeScale(1, 1)
+        vc.rightImage.transform = CGAffineTransform(scaleX: 1, y: 1)
         vc.leftImage.image = UIImage(named: "enemy")
-        vc.leftImage.transform = CGAffineTransformMakeScale(1, 1)
+        vc.leftImage.transform = CGAffineTransform(scaleX: 1, y: 1)
         vc.bottomLabel.text = "Player 1 choose your character"
         vc.viewDidLoad()
         

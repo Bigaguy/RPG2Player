@@ -109,6 +109,7 @@
 					01557A001C74D1DF0031F210 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = JA2625PV9L;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -270,6 +271,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabring.RPG2Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -281,6 +283,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabring.RPG2Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -303,6 +306,7 @@
 				01557A151C74D1DF0031F210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

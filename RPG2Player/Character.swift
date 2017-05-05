@@ -10,9 +10,9 @@ import Foundation
 
 class Character {
     
-    private var _hp : Int = 100
-    private var _side : playerSide!
-    private var _type : characterType!
+    fileprivate var _hp : Int = 100
+    fileprivate var _side : playerSide!
+    fileprivate var _type : characterType!
     
     enum playerSide {
         case left
